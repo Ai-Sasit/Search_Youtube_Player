@@ -1,8 +1,8 @@
 from youtube_search import YoutubeSearch
 from spotdl import Spotdl
 
-def YouTube(key):
-    results = YoutubeSearch(key, max_results=1).to_dict()
+def YouTube(keyword):
+    results = YoutubeSearch(keyword, max_results=1).to_dict()
     data = {"title" : dict(results[0])["title"],
             "duration" : dict(results[0])["duration"],
             "url" : f"https://www.youtube.com{dict(results[0])['url_suffix']}",
